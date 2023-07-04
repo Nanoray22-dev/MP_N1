@@ -19,6 +19,8 @@ El diseño de esta página solo debe adaptarse a pantallas de escritorio (PC).
 
 Aunque en los archivos de diseño que reciben no cuentas con medidas exactas, se espera que el resultado que brindes se acerce a lo que se muestra en la imagen de referencia.
 
+Si tienes dificultades para segmentar las partes a construir, aqui te dejo una guia referencial:
+![guia](./design/base-mp-1.png)
 
 ### Fuentes
 
