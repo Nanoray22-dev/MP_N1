@@ -1,36 +1,37 @@
 # Instrucciones
 
-Bienvenido al MiniProyecto del nivel 1. En este proyecto estaremos aplicando los conocimientos adquiridos a lo largo del nivel. Sigue las instrucciones de este archivo para completar el proyecto y ten en cuenta que estas mismas instrucciones se tomarán en cuenta para la evaluación del proyecto.
+Bienvenido al MiniProyecto del nivel 1. En este proyecto estaremos aplicando los conocimientos adquiridos durante esta primera y segunda semana. Sigue las instrucciones de este archivo para completar el proyecto y ten en cuenta que estas mismas instrucciones se tomarán en cuenta para la evaluación del proyecto.
 
 ## Instrucciones generales
 
-La empresa **Funval** desea implementar un nuevo sistema que ayude a los trabajarores a organizar sus tareas pendientes. El diseño de la aplicación web ya está terminado y ahora necesita que lleves a codigo este proyecto. Por suerte, ya tienes una base de código que puedes utilizar para comenzar a trabajar. Según las instrucciones que el cliente nos ha dado, te daré las instrucciones para completar el proyecto.
+La empresa **Insure** desea crear una landing page donde sus clientes puedan conocer un po0co más de ellos. El diseño de la página web ya está terminado y ahora necesita que lleves a codigo este proyecto. Por suerte, ya tienes una base de código que puedes utilizar para comenzar a trabajar. Según las instrucciones que el cliente nos ha dado para completar el proyecto.
 
-El Diseño es el siguiente: ![TODO App](./design/result-1.png)
+El Diseño esperado es el siguiente: ![Preview](./design/desktop-preview.jpg)
 
-![TODO App](./design/result-2.png)
+![design](./design/desktop-design.jpg)
 
-![TODO App](./design/result-3.png)
 
 ## Instrucciones del proyecto
 
 ### Layout | Diseño
 
-El diseño responsive para esta página web es opcional. Para lograr esto, el cliente y tu han acordado que de manera opcional se podrá trabajar con la librería de Bootstrap 5. Si no es el caso, puedes utilizar únicamente CSS.
+El diseño de esta página solo debe adaptarse a pantallas de escritorio (PC).
 
-Dentro del archivo Figma verás que hay 2 vistas principales: **Mobile** y **Desktop**. Como ya te mencioné, el diseño responsive es opcional, por lo cual si gustas puedes hacer la vista mobile; si no, con la vista Desktop es suficiente. Sin embargo, hacer la vista responsive podría sumar puntos a tu calificación final.
+Aunque en los archivos de diseño que reciben no cuentas con medidas exactas, se espera que el resultado que brindes se acerce a lo que se muestra en la imagen de referencia.
+
 
 ### Fuentes
 
-Las fuentes para este proyecto las hemos traido de [Google Fonts - Poppins](https://fonts.google.com/specimen/Poppins), ten en cuenta que debes importar las fuentes a usar en el proyecto como ya lo hemos aprendido en clase. Recuerda que para usarlas desde CSS, puedes utilizar la siguiente sintaxis:
+Las fuentes para este proyecto las hemos traido de [Google Fonts](https://fonts.google.com/), estas se encuentran especificamente dentro del archivo `style-guide.md`, ten en cuenta que debes importar las fuentes a usar en el proyecto como ya lo hemos aprendido en clase (En caso aun no lo hayas aprendido, puedes preguntar a tu maestro sobre este punto). Recuerda que para usarlas desde CSS, puedes utilizar la siguiente sintaxis:
 
 ```css
-font-family: 'Poppins', sans-serif; /* Fuente principal */
+font-family: 'DM Serif Display', serif; /* Títulos */
+font-family: 'Karla', sans-serif; /* Cuerpo */
 ```
 
 ### Iconos
 
-Para los iconos, utilizaremos la librería de iconos: [Font-Awesome](https://fontawesome.com/). Para usarlos puede seguir el enlace anterior, crearte una cuenta si no tienes una ya, y configurar el kit. 
+Para los iconos ya cuentas los archivos necesarios dentro de la carpeta `images`, sin embargo de querer un mejor control incluso del color de estos, te recomendamos usar la librería de iconos: [Font-Awesome](https://fontawesome.com/). Para usarlos puede seguir el enlace anterior, crearte una cuenta si no tienes una ya, y configurar el kit. 
 
 Al crear tu cuenta, puedes ir a la seccion de kits que te aparece en la página principal:
 
@@ -56,9 +57,9 @@ Por ejemplo:
 
 ## Código base
 
-Nosotros ya hemos creado algunos nombres de funciones que te pueden servir, sin embargo, no te limites a estas funciones, ya que son una guia de algunas partes que debes tener dentro de tu programa. Este contiene un código base, el cual eres libre de modificar a tu gusto.
+Nosotros ya hemos construido algunas partes de esta página, incluso te dejamos algunas notas dentro de los archivos a usar, sin embargo recuerda que puedes incluir tus propias soluciones, ya que esto es una guia de algunas partes que debes tener dentro de tu programa. Este contiene un código base, el cual eres libre de modificar a tu gusto.
 
-Para descargarlo, debes dirigirte al botón verde de arriba a la derecha del repositorio que dice `<> Code` y dar click. Allí te aparecerá una opción que diga `Download ZIP`. Eso te descargará los archivos del repositorio. Luego descomprime el archivo descargado.
+Para descargar este código, debes dirigirte al botón verde de arriba a la derecha del repositorio que dice `<> Code` y dar click. Allí te aparecerá una opción que diga `Download ZIP`. Eso te descargará los archivos del repositorio. Luego descomprime el archivo descargado.
 
 ## Consideraciones para la calificación
 
@@ -66,15 +67,10 @@ A continuación te diremos cuales son los puntos que se tomarán en cuenta para 
 
 - El diseño debe ser lo más fiel posible al proporcionado en las imagenes.
 - Los colores, fuentes, tamaños de letra, etc. deben ser lo mas cercanos a los que se ven en las imagenes.
-- En la seccion **All** deben aparecer todas las tareas existentes, tando mas activas como las completas.
-- En la seccion **Active** deben aparecer solo las tareas activas.
-- En la seccion **Completed** deben aparecer solo las tareas completas. Tambien debe haber un boton para borrar las tareas completas, se deben poder borrar una por una o todas con un solo boton.
-- En todas las vistas se permite marcar o descarmar una tarea como completada.
-- Las tareas completadas deben tener un estilo diferente a las tareas activas, deben estar tachadas como se muestra en las imagenes.
-- El proyecto debe ser estructurado de forma que sea fácil de entender y mantener.
-- El proyecto debe ser desplegado en Netlify drop.
+- La barra de navegación cumple con la distribucion, colores, fuentes y tamaños esperados.
+- El pie de página cumple con la distribucion, colores, fuentes y tamaños esperados.
+- La sección 'We're different' cumple con la distribucion, colores, fuentes y tamaños esperados.
 
 #### Consideraciones OPCIONALES que también podrían sumar puntos:
-- El diseño debe ser 100% responsive.
-- El proyecto debe ser desarrollado con Bootstrap 5. Para los estilos **que no se puedan** lograr con Bootstrap, puedes utilizar CSS puro.
-- Añadir una funcionalidad extra a las tareas, por ejemplo, generar persistencia de datos aprovechando el locar storage, permitir la edicion de una tarea actual, añadir subtareas, etc.
+- Ciertos elementos tienen efectos al pasar el mouse sobre ellos como se muestra en siguiente [imagen](./design/active-states.jpg).
+- Los patrones con imagenes de ondas se encuentran dentro de la página web (**opcional**).
