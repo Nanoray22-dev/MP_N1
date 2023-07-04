@@ -10,3 +10,30 @@
 
 
 /********* reglas-general-fin  **********/
+
+
+/********* hero-section ********/
+
+.hero {
+  background-color: hsl(256, 26%, 20%);
+  display: flex;
+  justify-content: center;
+  padding: 8rem 0;
+}
+
+.hero_child {
+  width: 50%;
+  max-width: 700px;
+}
+
+.hero-img {
+  position: relative;
+}
+
+.hero-img img {
+  position: absolute;
+}
+
+
+/********* hero-section-fin ********/
+
