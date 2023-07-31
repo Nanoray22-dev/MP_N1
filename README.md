@@ -19,3 +19,6 @@ Para completar este proyecto necesitarás:
 - la función `calcularTip()` tiene como objetivo calcular el monto de propina a pagar por cada persona.
 - la función `calcularTotal()` tiene como objetivo calcular el monto total a pagar por cada persona incluyendola propina.
 - la función `calcularTodo()` tiene como objetivo ejecutar las dos funciones anteriores.
+
+- El campo "tip amount" indica el monto de propina que equivale para una persona.
+- El campo "Total" indica el monto total a pagar por una persona incluyendo la propina.
