@@ -4,104 +4,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <title>Insure landing page</title>
+  <title>Tip calculator app</title>
 
+  <script src="./js/main.js" defer type="module"></script>
+
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-
-  <header>
-    <nav class="nav">
-      How we work
-      Blog
-      Account
-      View plans
-    </nav>
-
-    <section class="hero">
-      <div class="hero_child">
-
-        <div class="hero_line"></div> <!-- Linea arriba del titulo -->
-
-        <h1>Humanizing your insurance.</h1>
-
-        <p>
-          Get your life insurance coverage easier and faster. We blend our expertise
-        and technology to help you find the plan that's right for you. Ensure you
-        and your loved ones are protected.
-        </p>
-
-        <a href="#">View plans</a>
-      </div>
-
-      <div class="hero_child hero-img">
-        <img src="./images/image-intro-desktop.jpg" alt="">
-      </div>
-    </section>
-  </header>
-
-  <main>
-    <section class="we-different">
-
-
-      We're different
-
-      Snappy Process
-
-      Our application process can be completed in minutes, not hours. Don't get
-      stuck filling in tedious forms.
-
-      Affordable Prices
-
-      We don't want you worrying about high monthly costs. Our prices may be low,
-      but we still offer the best coverage possible.
-
-      People First
-
-      Our plans aren't full of conditions and clauses to prevent payouts. We make
-      sure you're covered when you need it.
-    </section>
-
-    <section class="find-more">
-      Find out more about how we work
-
-      How we work
-    </section>
-  </main>
-
-
-  <footer>
-
-    Our company
-
-    How we work
-    Why Insure?
-    View plans
-    Reviews
-
-    Help me
-
-    FAQ
-    Terms of use
-    Privacy policy
-    Cookies
-
-    Contact
-
-    Sales
-    Support
-    Live chat
-
-    Others
-
-    Careers
-    Press
-    Licenses
-  </footer>
-
+  <header><img src="./images/logo.svg" alt=""></header>
+  <div class="general-wrapper">
+    <div class="data-wrapper">
+      <h1>Bill</h1><label for="input-bill"><input class="input-bill" id="input-bill" type="number" value="0"
+          min="0"></label>
+      <h2>Select Tip %</h2>
+      <ul>
+        <li id="percentage-5"><button type="button" class="percentage-button" value="5">5%</button></li>
+        <li id="percentage-10"><button type="button" class="percentage-button" value="10">10%</button></li>
+        <li id="percentage-15"><button type="button" class="percentage-button" value="15">15%</button></li>
+        <li id="percentage-25"><button type="button" class="percentage-button" value="25">25%</button></li>
+        <li id="percentage-50"><button type="button" class="percentage-button" value="50">50%</button></li>
+        <li><input type="number" placeholder="Custom" class="percentage-button"></li>
+      </ul>
+      <h2>Number of People</h2><label for="input-people"><input id="input-people" class="input-people" type="number"
+          value="1" min="1"></label>
+    </div>
+    <div class="result-wrapper">
+      <div class="result-txt">
+        <div class="text-amount">
+          <div>
+            <h2>Tip Amount</h2>
+            <p>/ person</p>
+          </div>
+          <h3>$<span id="tip-amount">0</span></h3>
+        </div>
+        <div class="total-amount">
+          <div>
+            <h2>Total</h2>
+            <p>/ person</p>
+          </div>
+          <h3>$<span id="total">0</span></h3>
+        </div>
+      </div><button type="button" class="reset-button">RESET</button>
+    </div>
+  </div>
 </body>
 
 </html>
