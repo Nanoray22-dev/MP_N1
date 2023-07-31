@@ -61,6 +61,7 @@ pero con la propiedad "textContent":
 >>> tipAmount.textContent
 
 */
+/*----------------------------------------- EDITAR A PARTIR DE AQUI ----------------------------------------------------------*/
 function runProgram(button) {
   // Aqui capturamos los valores del usuario, y si alguno está vacio, lo dejamos en cero por defecto, para evitar errores en nuestro programa
   tip = parseFloat(button.value) || 0; // No Borrar
