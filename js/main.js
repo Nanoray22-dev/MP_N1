@@ -8,6 +8,7 @@ const billInput = document.querySelector("#input-bill");
 
 // en la seccion de "Select Tip %" hay 6 opciones para elegir el porcentaje de propina, aqui los seleccionamos a todos.
 const percentageButtons = [...document.querySelectorAll(".percentage-button")];
+const customPercentageBtn = document.querySelector("#custom-percentage-button");
 
 // elemento <input> donde se indica el numero de personas.
 const peopleInput = document.querySelector("#input-people");
@@ -15,6 +16,9 @@ const peopleInput = document.querySelector("#input-people");
 // En estos campos se muestra los totales
 const tipAmountInput = document.querySelector("#tip-amount");
 const totalInput = document.querySelector("#total");
+
+// Este es el boton de reset
+const resetBtn = document.querySelector("#reset-button");
 
 // Aqui se guarda el porcentaje del TIP, bill y people
 let tip = 0;
@@ -47,6 +51,7 @@ percentageButtons.forEach( button => {
 peopleInput.addEventListener("input", runProgram)
 
 
+
 /* Esta función se encarga de ejecutar todo el programa, ten en cuenta que tanto como para acceder
 a los valores de los inputs como para reemplazarlos debes llamar al input y luego a su propiedad
 value, ya que funcionan como objetos. Por ejemplo:
@@ -68,3 +73,10 @@ function runProgram(button) {
   bill = parseFloat(billInput.value) || 0; // No Borrar
   people = parseFloat(peopleInput.value) || 0; // No Borrar
 }
+
+
+// BOTON DE RESET
+// Aqui se ejecuta el botón reset, si bien es cierto ya está por funcionar, mira la funcion
+// reset, aun no está recibiendo los parametros!! dale los parametros adecuados que debe reiniciar
+// para que trabaje de manera adecuada. por ejemplo, los inputs
+resetBtn.addEventListener("click", () => reset())
