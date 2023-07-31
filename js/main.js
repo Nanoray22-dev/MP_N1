@@ -12,8 +12,15 @@ const percentageButtons = [...document.querySelectorAll(".percentage-button")];
 // elemento <input> donde se indica el numero de personas.
 const inputPeople = document.querySelector("#input-people");
 
+// En estos campos se muestra los totales
+const tipAmount = document.querySelector("#tip-amount");
+const total = document.querySelector("#total");
+
 // Aqui se guarda el porcentaje del TIP
 let tip = 0;
+
+
+/*--------------------------- FUNCIONES PARA LOS EVENTOS ----------------------------*/
 
 // Cada vez que el usuario escriba en el campo bill, ejecutará una tarea (función)
 bill.addEventListener("input", runProgram);
@@ -22,14 +29,13 @@ bill.addEventListener("input", runProgram);
 // este primer apartado se asegura de que cada uno realice esa tarea.
 percentageButtons.forEach( button => {
 
-  tip = parseFloat(button.value);
   
   // Cada vez que el usuario seleccione o escriba una propina, ejecutará una tarea (función)
   if (button.type == "button") {
     
-    button.addEventListener("click", runProgram)
+    button.addEventListener("click", () => runProgram(button))
   } else {
-    button.addEventListener("input", runProgram)
+    button.addEventListener("input", () => runProgram(button))
     
   }
 });
@@ -45,10 +51,16 @@ value, ya que funcionan como objetos. Por ejemplo:
 
 >>> input.value // accedemos al "value" del elemento input
 >>> let valor = input.value // obtenemos el "value" del input y lo guardamos dentro de la variable valor.
-*/
-function runProgram() {
 
-  
-  
-  
+
+para los casos de "tipAmount" y "total" se debe seguir el mismo procedimiento
+pero con la propiedad "textContent":
+
+>>> tipAmount.textContent
+
+*/
+function runProgram(button) {
+  tip = parseFloat(button.value) || 0; // No Borrar
+
+  console.log(tip)
 }
