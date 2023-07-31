@@ -2,8 +2,7 @@
  * Esta función te permite hacer un reset de los campos selecciónados por el usuario.
  * No se retorna nada.
  */
-
-export function reset (bill, tipButtons, tipInput, people) {
+export function reset(bill, tipButtons, tipInput, people) {
 
 }
 
@@ -32,7 +31,7 @@ export function calcularTotal(bill, tip, people) {
  * calcularTotal(), luego retornar un array, teniendo en la posición 0 
  * el retorno de calcularTip() y en la posición 1 el retorno de calcularTotal()
  */
-export function calcularTodo() {
+export function calcularTodo(bill, tip, people) {
 
 }
 
