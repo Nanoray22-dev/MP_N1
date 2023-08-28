@@ -1,5 +1,5 @@
 // Traemos las funciones que están en el archivo utilities.js para usarlos aqui
-import { reset, calcularTip, calcularTotal, esCero, claseActivo } from './utilities.js';
+import { reset, calcularTip, esCero, claseActivo } from './utilities.js';
 
 /*------------- Elementos del DOM a usar --------------------*/
 
@@ -72,6 +72,10 @@ function runProgram(button) {
   tip = parseFloat(button.value) || tip; // No Borrar
   bill = parseFloat(billInput.value) || 0; // No Borrar
   people = parseFloat(peopleInput.value) || 0; // No Borrar
+
+  /* ESCRIBE TU CÓDIGO AQUI ABAJO */
+
+
 }
 
 
