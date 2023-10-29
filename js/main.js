@@ -1,5 +1,5 @@
 // Traemos las funciones que están en el archivo utilities.js para usarlos aqui
-import { reset, calcularTip, esCero, claseActivo,calcularTotal } from './utilities.js';
+import { reset, calcularTip, esCero, claseActivo } from './utilities.js';
 
 /*------------- Elementos del DOM a usar --------------------*/
 
