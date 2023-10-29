@@ -23,15 +23,17 @@
           min="0"></label>
       <h2>Select Tip %</h2>
       <ul>
-        <li id="percentage-5"><button type="button" class="percentage-button" value="5">5%</button></li>
-        <li id="percentage-10"><button type="button" class="percentage-button" value="10">10%</button></li>
-        <li id="percentage-15"><button type="button" class="percentage-button" value="15">15%</button></li>
-        <li id="percentage-25"><button type="button" class="percentage-button" value="25">25%</button></li>
-        <li id="percentage-50"><button type="button" class="percentage-button" value="50">50%</button></li>
+        <li class="selected" id="percentage-5"><button type="button" class="percentage-button" value="5">5%</button></li>
+        <li class="selected" id="percentage-10"><button type="button" class="percentage-button" value="10">10%</button></li>
+        <li class="selected" id="percentage-15"><button type="button" class="percentage-button" value="15">15%</button></li>
+        <li class="selected" id="percentage-25"><button type="button" class="percentage-button" value="25">25%</button></li>
+        <li class="selected" id="percentage-50"><button type="button" class="percentage-button" value="50">50%</button></li>
         <li><input type="number" placeholder="Custom" id="custom-percentage-button" class="percentage-button"></li>
       </ul>
+      <span id="people-error-message" class="error-people"></span>
       <h2>Number of People</h2><label for="input-people"><input id="input-people" class="input-people" type="number"
           value="1" min="1"></label>
+          
     </div>
     <div class="result-wrapper">
       <div class="result-txt">

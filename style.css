@@ -96,7 +96,9 @@ button {
   height: 40px;
   box-sizing: border-box;
 }
-
+.percentage-button.selected {
+  background-color: #8de4af; 
+}
 .general-wrapper {
   max-width: 100%;
   background-color: white;
@@ -181,4 +183,10 @@ input:focus {
 
 .input-invalid {
   border: 2px solid orangered;
+}
+.error-people{
+  position: absolute;
+  top: 460px;
+  left: 43%;
+  
 }

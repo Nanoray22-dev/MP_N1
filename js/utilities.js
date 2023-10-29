@@ -3,7 +3,22 @@
  * No se retorna nada. recuerca que algunos valores se hace el reset a 0, otros a 1
  */
 export function reset(billInput, customPercentageBtn, peopleInput, tipAmountInput, totalInput) {
+    billInput.value = '';
+    customPercentageBtn.value = '';
+    peopleInput.value = '';
+   tipAmountInput.textContent = "0";
+    totalInput.textContent = "0"; 
+    
+    peopleInput.style.borderColor = '';
+    document.getElementById('people-error-message').textContent ='';
+    
+   
 
+  //   console.log("billInput", billInput); 
+  //   console.log("customPercentageBtn", customPercentageBtn); 
+  //   console.log("peopleInput", peopleInput);
+  //   console.log("tipAmountInput", tipAmountInput);
+  //   console.log("totalInput", totalInput);
 }
 
 
@@ -13,7 +28,8 @@ export function reset(billInput, customPercentageBtn, peopleInput, tipAmountInpu
  * @returns el monto de tip por persona.
  */
 export function calcularTip(bill, tip, people) {
-
+  const tipPerPerson = (bill *(tip / 100)) / people;
+  return tipPerPerson;
 }
 
 /**
@@ -22,7 +38,8 @@ export function calcularTip(bill, tip, people) {
  * @returns el monto total por persona.
  */
 export function calcularTotal(bill, tip, people) {
-
+   const totalPerPerson = ( bill + (bill * tip /100)) / people;
+   return totalPerPerson;
 }
 
 
@@ -31,7 +48,7 @@ export function calcularTotal(bill, tip, people) {
  * Valida si el valor de un campo es 0 o no, si lo es retorna true, si no, retorna false
  */
 export function esCero(input) {
-
+   return input === 0;
 }
 
 
@@ -41,5 +58,5 @@ export function esCero(input) {
  * puedes investigar sobre : uso de classList en los elementos DOM. añadir, remover.
  */
 export function claseActivo(input) {
-
+    input.clasList.add('Active')
 }

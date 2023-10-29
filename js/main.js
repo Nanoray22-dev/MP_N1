@@ -1,5 +1,5 @@
 // Traemos las funciones que están en el archivo utilities.js para usarlos aqui
-import { reset, calcularTip, esCero, claseActivo } from './utilities.js';
+import { reset, calcularTip, esCero, claseActivo,calcularTotal } from './utilities.js';
 
 /*------------- Elementos del DOM a usar --------------------*/
 
@@ -75,7 +75,53 @@ function runProgram(button) {
 
   /* ESCRIBE TU CÓDIGO AQUI ABAJO */
 
+  if(button?.type === "button"){
+    customPercentageBtn.value = "";
+  }
 
+  // Verificar si peopleInput es cero o negativo
+  if (esCero(people)) {
+    // Resaltar en rojo cuando no hay un valor
+    peopleInput.style.borderColor = 'red';
+    document.getElementById('people-error-message').textContent = "Can't be zero";
+    document.getElementById('people-error-message').style.color = 'red';
+    return;
+  } else {
+    // Resaltar en verde cuando se agrega un valor
+    peopleInput.style.borderColor = 'green'; // Puedes cambiar a tu color deseado
+    document.getElementById('people-error-message').textContent = '';
+  }
+
+  if(customPercentageBtn.value !== ""){
+    tip = parseFloat(customPercentageBtn.value) || 0
+  }
+    
+  
+  percentageButtons.forEach(btn => btn.classList.remove("selected"));
+  
+  if (button?.classList) {
+    button.classList.add("selected");
+  }
+  
+  // Calcular tip y total
+  const tipAmount = calcularTip(bill, tip, people);
+  const total = calcularTotal(bill, tip, people);
+  // mostrar los resultados en pantalla
+  tipAmountInput.textContent = `${tipAmount.toFixed(2)}`; 
+  totalInput.textContent = `${total.toFixed(2)}`;
+
+  resetBtn.disabled = tipAmount === 0 && total === 0;
+
+  if (resetBtn.disabled) {
+    resetBtn.style.backgroundColor = '#ccc';
+    resetBtn.style.color = '#888';
+    resetBtn.style.cursor = 'not-allowed';
+  } else {
+    resetBtn.style.backgroundColor = '';
+    resetBtn.style.color = '';
+    resetBtn.style.cursor = 'pointer';
+  }
+  // button.classList.toggle('active')
 }
 
 
@@ -83,4 +129,14 @@ function runProgram(button) {
 // Aqui se ejecuta el botón reset, si bien es cierto ya está por funcionar, mira la funcion
 // reset, aun no está recibiendo los parametros!! dale los parametros adecuados que debe reiniciar
 // para que trabaje de manera adecuada. por ejemplo, los inputs
-resetBtn.addEventListener("click", () => reset())
+resetBtn.addEventListener("click", () => { 
+  reset (billInput,customPercentageBtn, peopleInput, tipAmountInput, totalInput);
+  percentageButtons.forEach(btn => btn.classList.remove('selected'));
+     // Deshabilitar el botón de reset después de hacer clic
+  resetBtn.disabled = true;
+
+  // Cambiar el estilo del botón de reset cuando está deshabilitado
+  resetBtn.style.backgroundColor = '#ccc';
+  resetBtn.style.color = '#888';
+  resetBtn.style.cursor = 'not-allowed';
+ })
