@@ -11,14 +11,7 @@ export function reset(billInput, customPercentageBtn, peopleInput, tipAmountInpu
     
     peopleInput.style.borderColor = '';
     document.getElementById('people-error-message').textContent ='';
-    
-   
-
-  //   console.log("billInput", billInput); 
-  //   console.log("customPercentageBtn", customPercentageBtn); 
-  //   console.log("peopleInput", peopleInput);
-  //   console.log("tipAmountInput", tipAmountInput);
-  //   console.log("totalInput", totalInput);
+  
 }
 
 
